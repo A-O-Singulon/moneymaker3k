@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(name = "/integration/espn")
+@RequestMapping("/integration/espn")
 public class EspnApiResource {
 
     private EspnApiService espnApiService;
@@ -17,7 +17,7 @@ public class EspnApiResource {
         this.espnApiService = espnApiService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<Object> getEspn() {
         return new ResponseEntity<>(espnApiService.getEspnApi(), HttpStatus.OK);
     }
