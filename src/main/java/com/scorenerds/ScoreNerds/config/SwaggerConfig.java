@@ -13,7 +13,7 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Scorenerds") // Set your application name here
+                        .title("Scorenerds")
                         .version("0.1.0")
                         .description("API documentation for Scorenerds")
                         .termsOfService("http://swagger.io/terms/")
