@@ -1,25 +1,23 @@
 package com.scorenerds.ScoreNerds.integration.external.service;
 
-import org.springframework.http.ResponseEntity;
+import com.scorenerds.ScoreNerds.dto.LeagueDTO;
+import com.scorenerds.ScoreNerds.dto.TeamDTO;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class EspnApiService {
 
-    private static final String ESPN_API_ADDRESS = "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard";
-
     public EspnApiService() {}
 
-    public Object getEspnApi() {
-        try {
-            RestTemplate restTemplate = new RestTemplate();
-            ResponseEntity<String> response = restTemplate.getForEntity(ESPN_API_ADDRESS, String.class);
+    public LeagueDTO getLeague(Object response) {
+        return new LeagueDTO();
+    }
 
-            return response.getBody();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    public List<TeamDTO> getTeams(Object response) {
+        return new ArrayList<>();
     }
 
 }
