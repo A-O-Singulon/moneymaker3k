@@ -12,5 +12,6 @@ import lombok.Setter;
 public class CompetitorDTO {
 
     TeamDTO team;
+    String score;
 
 }
