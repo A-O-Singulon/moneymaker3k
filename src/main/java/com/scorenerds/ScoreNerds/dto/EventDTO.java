@@ -11,9 +11,8 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EspnDataDTO {
+public class EventDTO {
 
-    private List<LeagueDTO> leagues;
-    private List<EventDTO> events;
+    List<CompetitionDTO> competitions;
 
 }

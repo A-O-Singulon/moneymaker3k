@@ -3,6 +3,7 @@
 
 .classpath
 .project
+.env
 
 .DS_Store
 /.settings

@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/score")
-public class ScoreResource {
+public class ScoreController {
 
     private ScoreService scoreService;
 
-    public ScoreResource(ScoreService scoreService) {
+    public ScoreController(ScoreService scoreService) {
         this.scoreService = scoreService;
     }
 

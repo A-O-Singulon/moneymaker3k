@@ -5,15 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EspnDataDTO {
+public class CompetitorDTO {
 
-    private List<LeagueDTO> leagues;
-    private List<EventDTO> events;
+    TeamDTO team;
 
 }
