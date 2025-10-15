@@ -34,4 +34,13 @@ public class EspnApiController {
         }
     }
 
+    public EspnDataDTO getEspnApiData() {
+        try {
+            RestTemplate restTemplate = new RestTemplate();
+            return restTemplate.getForObject(ESPN_API_ADDRESS, EspnDataDTO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
