@@ -1,6 +1,6 @@
 package com.scorenerds.ScoreNerds.integration.external.controller;
 
-import com.scorenerds.ScoreNerds.dto.EspnDataDTO;
+import com.scorenerds.ScoreNerds.integration.external.dto.EspnDataDTO;
 import com.scorenerds.ScoreNerds.integration.external.service.EspnApiService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

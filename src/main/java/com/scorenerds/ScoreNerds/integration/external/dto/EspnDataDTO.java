@@ -1,4 +1,4 @@
-package com.scorenerds.ScoreNerds.dto;
+package com.scorenerds.ScoreNerds.integration.external.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,8 +11,9 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventDTO {
+public class EspnDataDTO {
 
-    List<CompetitionDTO> competitions;
+    private List<LeagueDTO> leagues;
+    private List<EventDTO> events;
 
 }

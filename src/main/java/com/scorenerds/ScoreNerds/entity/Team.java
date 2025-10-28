@@ -20,8 +20,12 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "TEAM_NAME")
+    @Column(name = "TEAM_NAME", unique = true)
     private String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "SPORT_ID")
+    private Sport sport;
 
     @OneToMany(mappedBy = "team")
     private List<Athlete> athletes;

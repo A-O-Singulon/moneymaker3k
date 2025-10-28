@@ -1,23 +1,18 @@
 package com.scorenerds.ScoreNerds.repository;
 
 import com.scorenerds.ScoreNerds.entity.Sport;
-import com.scorenerds.ScoreNerds.entity.Team;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface TeamRepository extends CrudRepository<Team, Integer> {
-
-    Boolean existsByNameAndSport(String name, Sport sport);
+public interface SportRepository extends CrudRepository<Sport, Integer> {
 
     @Query(
-            "SELECT t.name From Team t " +
-            "WHERE t.sport = :sport "
+            "SELECT s FROM Sport s " +
+            "WHERE LOWER(s.name) LIKE LOWER(:name) "
     )
-    List<String> findsNamesBySport(Sport sport);
+    public Sport findSportByName(@Param("name") String name);
 
 }

@@ -1,4 +1,4 @@
-package com.scorenerds.ScoreNerds.dto;
+package com.scorenerds.ScoreNerds.integration.external.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
