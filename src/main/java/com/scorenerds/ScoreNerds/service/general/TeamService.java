@@ -1,5 +1,6 @@
 package com.scorenerds.ScoreNerds.service.general;
 
+import com.scorenerds.ScoreNerds.dto.TeamDTO;
 import com.scorenerds.ScoreNerds.entity.Sport;
 import com.scorenerds.ScoreNerds.entity.Team;
 import com.scorenerds.ScoreNerds.repository.TeamRepository;
@@ -15,6 +16,11 @@ public class TeamService {
 
     public TeamService(TeamRepository teamRepository) {
         this.teamRepository = teamRepository;
+    }
+
+    public List<TeamDTO> getAllTeams() {
+        return this.teamRepository.findAll().stream()
+                .map(TeamDTO::new).toList();
     }
 
     @Transactional
